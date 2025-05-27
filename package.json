@@ -1,0 +1,23 @@
+{
+  "name": "sdk-ai-mcp",
+  "version": "1.0.0",
+  "description": "A Model Context Protocol (MCP) server implementation in JavaScript",
+  "main": "index.js",
+  "type": "module",
+  "bin": {
+    "mcp-server": "./index.js"
+  },
+  "scripts": {
+    "start": "node index.js",
+    "dev": "node --inspect index.js",
+    "test": "node test-client.js",
+    "test:manual": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["mcp", "model-context-protocol", "server", "ai"],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.12.0",
+    "node-fetch": "^3.3.2"
+  }
+}
