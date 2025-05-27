@@ -52,13 +52,28 @@ This MCP server can be connected to various AI assistants that support the Model
 2. **Continue.dev** - VS Code extension that supports MCP
 3. **Other MCP clients** - Any client that supports stdio transport
 
-### Testing the Server
+#### VS Code
 
-Run the validation script to ensure everything is working:
+Sample `mcp.json` for connect locally.
 
-```bash
-node validate.js
+```json
+{
+  // 💡 Inputs are prompted on first server start, then stored securely by VS Code.
+  "inputs": [
+  ],
+  "servers": {
+    "azure-java-sdk-mcp": {
+      "type": "stdio",
+      "command": "node",
+      "args": [
+        "<path-to-index.js>"
+      ]
+    }
+  }
+}
 ```
+
+One may need to "start" it once, to cache the tools.
 
 ### Available VS Code Tasks
 
